@@ -1,7 +1,5 @@
-
-
 from datatypes import func, var, const, literal
-from strategy import unit_preference_resolution, sos_resolution
+from strategy import sos_resolution
 from datatypes import clause, negate
 
 
@@ -16,6 +14,7 @@ def sokrat():
     T = clause(negate(mortal(s)))
     res = sos_resolution({p1, p2}, T)
     print(res)
+
 
 if __name__ == "__main__":
     sokrat()
