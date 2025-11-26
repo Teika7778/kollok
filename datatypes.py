@@ -47,6 +47,7 @@ class Clause:
     literals: FrozenSet[Literal]
     parent1: "Clause" = None
     parent2: "Clause" = None
+    sub: "Substitution" = None
 
     def __str__(self):
         if len(self.literals) == 0:

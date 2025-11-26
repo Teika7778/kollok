@@ -70,7 +70,7 @@ def resolve(clause1: Clause, clause2: Clause) -> Set[Clause] | None:
         if not new_literals:
             toRet.add(Clause(frozenset(), parent1=clause1, parent2=clause2))
 
-        candidate = Clause(frozenset(new_literals), parent1=clause1, parent2=clause2)
+        candidate = Clause(frozenset(new_literals), parent1=clause1, parent2=clause2, sub=substitution)
 
         if has_tautology(candidate):
             continue
