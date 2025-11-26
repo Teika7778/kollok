@@ -36,8 +36,6 @@ class Literal:
         terms_str = ", ".join(str(term) for term in self.terms)
         return f"{sign}{self.predicate}({terms_str})"
 
-    def negate(self):
-        return Literal(self.predicate, self.terms, not self.negative)
 
     def __hash__(self):
         # Хэш вычисляется на основе предиката, кортежа терминов и отрицания
@@ -90,3 +88,6 @@ def literal(predicate: str, *terms: Term, negative: bool = False) -> Literal:
 
 def clause(*literals: Literal) -> Clause:
     return Clause(frozenset(literals))
+
+def negate(self: Literal) -> "Literal":
+    return Literal(self.predicate, self.terms, not self.negative)
