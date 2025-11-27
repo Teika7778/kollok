@@ -7,7 +7,7 @@ from datatypes import clause, negate
 def formalize_problem(problem_text):
     """Простая функция для формализации одной задачи"""
 
-    genai.configure(api_key="AIzaSyC9gW1e8K2Dc6c1cO_HWSeN6FfW8zacABk")
+    genai.configure(api_key="")
     model = genai.GenerativeModel("gemini-2.5-flash")
 
     prompt = """Ты преобразуешь логические задачи в формальные формулы. Следуй строгому формату:
