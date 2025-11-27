@@ -5,9 +5,6 @@ from collections import deque
 
 
 def sos_resolution(clauses: Set[Clause], target: Clause) -> Optional[Clause]:
-    """
-    Улучшенная реализация метода резолюций с поддержкой (Set of Support).
-    """
     initial_clauses = clauses.copy()
     support_set = {target}
     all_clauses = initial_clauses | support_set
@@ -23,7 +20,6 @@ def sos_resolution(clauses: Set[Clause], target: Clause) -> Optional[Clause]:
 
         processed.add(current_clause)
 
-        # Создаем копию множества для итерации, чтобы избежать изменения во время обхода
         clauses_to_check = list(all_clauses)
 
         for other_clause in clauses_to_check:
