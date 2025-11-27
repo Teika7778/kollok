@@ -81,7 +81,7 @@ def explain_solution_detailed(solution_log: list, original_formulas: list = None
     Более детальная версия с информацией об исходных формулах
     """
     try:
-        genai.configure(api_key="AIzaSyC9gW1e8K2Dc6c1cO_HWSeN6FfW8zacABk")
+        genai.configure(api_key="")
         model = genai.GenerativeModel("gemini-2.5-flash")
         
         # Подготовка информации об исходных формулах
